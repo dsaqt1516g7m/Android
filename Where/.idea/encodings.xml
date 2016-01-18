@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/Client/Entity/AuthToken.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/Client/Entity/Link.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/Client/Entity/MediaType.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/Client/Entity/Restaurant.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/Client/Entity/RestaurantCollection.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/Client/Entity/Root.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/Client/WhereClient.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/Client/WhereClientException.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/edu/upc/eetac/dsa/where/LoginActivity.java" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_restaurant_detail.xml" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/list_row_sting.xml" charset="windows-1252" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
