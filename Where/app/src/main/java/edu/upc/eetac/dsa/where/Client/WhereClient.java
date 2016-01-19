@@ -94,6 +94,29 @@ public class WhereClient {
         else
             throw new WhereClientException(response.readEntity(String.class));
     }
+    public String getComments(String uri) throws WhereClientException {
+        /*
+        if(uri==null){
+            uri = getLink(authToken.getLinks(), "current-stings").getUri().toString();
+        }
+        */
+        uri = BASE_URI+"/restaurant"+ "/comments";
+        WebTarget target = client.target(uri);
+        Response response = target.request().get();
+        if (response.getStatus() == Response.Status.OK.getStatusCode())
+            return response.readEntity(String.class);
+        else
+            throw new WhereClientException(response.readEntity(String.class));
+    }
+
+    public String getRestaurant(String uri) throws WhereClientException {
+        WebTarget target = client.target(uri);
+        Response response = target.request().get();
+        if (response.getStatus() == Response.Status.OK.getStatusCode())
+            return response.readEntity(String.class);
+        else
+            throw new WhereClientException(response.readEntity(String.class));
+    }
 
 
 }

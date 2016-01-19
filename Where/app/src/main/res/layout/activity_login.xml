@@ -5,7 +5,26 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin" tools:context=".LoginActivity">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        android:background="#FFFFFF"
+        >
 
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerHorizontal="true"
+            android:text="Where to eat in Barcelona"
+            android:drawableBottom="@mipmap/ic_launcher"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
     <!-- Login progress -->
     <ProgressBar android:id="@+id/login_progress" style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -23,7 +42,7 @@
                 <AutoCompleteTextView android:id="@+id/username" android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:hint="@string/prompt_username"
                     android:inputType="text" android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"  android:layout_below="@+id/header" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -43,6 +62,8 @@
                 android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:layout_marginTop="16dp" android:text="@string/action_sign_in"
                 android:textStyle="bold" />
+
+
 
         </LinearLayout>
     </ScrollView>

@@ -1,9 +1,13 @@
 package edu.upc.eetac.dsa.where;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -22,6 +26,7 @@ public class RestaurantDetailActivity extends AppCompatActivity {
     String name = null;
     String id = null;
     int likes =0 ;
+    String slikes = null;
     String address = null;
     String owner = null;
     String description = null;
@@ -35,6 +40,7 @@ public class RestaurantDetailActivity extends AppCompatActivity {
     TextView textViewLikes= null ;
     TextView textViewaddress= null ;
     TextView textViewPhone= null;
+    Button btcomments = null;
 
 
     class GetRestaurantTask extends AsyncTask<Void, Void, String> {
@@ -49,7 +55,7 @@ public class RestaurantDetailActivity extends AppCompatActivity {
         protected String doInBackground(Void... params) {
             String jsonSting = null;
             try {
-                jsonSting = WhereClient.getInstance().getRestaurants(uri);
+                jsonSting = WhereClient.getInstance().getRestaurant(uri);
             } catch (WhereClientException e) {
                 // TODO: Handle gracefully
                 Log.d(TAG, e.getMessage());
@@ -67,6 +73,7 @@ public class RestaurantDetailActivity extends AppCompatActivity {
             description=restaurant.getDescription();
             owner= restaurant.getOwner();
             likes= restaurant.getLikes();
+            slikes = String.valueOf(likes);
             address= restaurant.getAddress();
             phone = restaurant.getPhone();
 
@@ -74,7 +81,7 @@ public class RestaurantDetailActivity extends AppCompatActivity {
             textViewName.setText(name);
             textViewDescription.setText(description);
             textViewOwner.setText(owner);
-            textViewLikes.setText(likes);
+            textViewLikes.setText(slikes);
             textViewaddress.setText(address);
             textViewPhone.setText(phone);
 
@@ -101,7 +108,18 @@ public class RestaurantDetailActivity extends AppCompatActivity {
         mGetRestaurantTask = new GetRestaurantTask(uri);
         mGetRestaurantTask.execute((Void) null);
 
+        btcomments = (Button) findViewById(R.id.Comments);
+        // set list OnItemClick listener
+        /*btcomments.setOnClickListener(new View.OnClickListener() {
+            @Override
+             public void onClick(View v) {
+                Intent intent = new Intent(RestaurantDetailActivity.this, RestaurantCommentsActivity.class);
+                intent.putExtra("uri", uri);
+                startActivity(intent);
+            }
+        });*/
 
     }
+
 }
 
