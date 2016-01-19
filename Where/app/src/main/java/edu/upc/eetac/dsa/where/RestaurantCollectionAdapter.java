@@ -50,28 +50,28 @@ public class RestaurantCollectionAdapter extends BaseAdapter {
         }
 
         String name = restaurantCollection.getRestaurants().get(position).getName();
-        String ID = restaurantCollection.getRestaurants().get(position).getId();
-        String Owner = restaurantCollection.getRestaurants().get(position).getOwner();
+        String Description = restaurantCollection.getRestaurants().get(position).getDescription();
+        String Address = restaurantCollection.getRestaurants().get(position).getAddress();
 
 
         viewHolder.textViewName.setText(name);
-        viewHolder.textViewID.setText(ID);
-        viewHolder.textViewOwner.setText(Owner);
+        viewHolder.textViewDescrition.setText(Description);
+        viewHolder.textViewAddress.setText(Address);
         return convertView;
     }
 
     class ViewHolder{
         TextView textViewName;
-        TextView textViewID;
-        TextView textViewOwner;
+        TextView textViewDescrition;
+        TextView textViewAddress;
 
         ViewHolder(View row){
             this.textViewName = (TextView) row
                     .findViewById(R.id.textName);
-            this.textViewID = (TextView) row
-                    .findViewById(R.id.textID);
-            this.textViewOwner = (TextView) row
-                    .findViewById(R.id.textOwner);
+            this.textViewDescrition = (TextView) row
+                    .findViewById(R.id.textDescription);
+            this.textViewAddress = (TextView) row
+                    .findViewById(R.id.textAddress);
         }
     }
 

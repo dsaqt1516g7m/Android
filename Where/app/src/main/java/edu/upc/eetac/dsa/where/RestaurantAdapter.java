@@ -27,7 +27,7 @@ public class RestaurantAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
 
             viewHolder.tvId = (TextView) convertView
-                    .findViewById(R.id.textID);
+                    .findViewById(R.id.textAddress);
             viewHolder.tvName = (TextView) convertView
                     .findViewById(R.id.textName);
             viewHolder.tvDescription = (TextView) convertView

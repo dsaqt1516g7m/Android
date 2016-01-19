@@ -3,7 +3,13 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+    <TextView
+        android:id="@+id/lName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Restaurant:"
+        android:textColor="@color/colorA"
+        />
 
     <TextView
         android:id="@+id/textName"
@@ -17,14 +23,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/textID"
+            android:id="@+id/textDescription"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:gravity="start" />
 
         <TextView
-            android:id="@+id/textOwner"
+            android:id="@+id/textAddress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"

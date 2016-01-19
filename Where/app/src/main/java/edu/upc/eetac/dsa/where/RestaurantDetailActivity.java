@@ -24,19 +24,16 @@ public class RestaurantDetailActivity extends AppCompatActivity {
     GetRestaurantTask mGetRestaurantTask = null;
     String uri = null;
     String name = null;
-    String id = null;
     int likes =0 ;
     String slikes = null;
     String address = null;
-    String owner = null;
     String description = null;
     String phone = null;
     private final static String TAG = RestaurantDetailActivity.class.toString();
 
-    TextView textViewID = null;
+
     TextView textViewName= null;
     TextView textViewDescription= null;
-    TextView textViewOwner= null ;
     TextView textViewLikes= null ;
     TextView textViewaddress= null ;
     TextView textViewPhone= null;
@@ -68,19 +65,16 @@ public class RestaurantDetailActivity extends AppCompatActivity {
             Log.d(TAG, jsonRestaurant);
             Restaurant restaurant = (new Gson()).fromJson(jsonRestaurant, Restaurant.class);
 
-            id=restaurant.getId();
+
             name=restaurant.getName();
             description=restaurant.getDescription();
-            owner= restaurant.getOwner();
             likes= restaurant.getLikes();
             slikes = String.valueOf(likes);
             address= restaurant.getAddress();
             phone = restaurant.getPhone();
 
-            textViewID.setText(id);
             textViewName.setText(name);
             textViewDescription.setText(description);
-            textViewOwner.setText(owner);
             textViewLikes.setText(slikes);
             textViewaddress.setText(address);
             textViewPhone.setText(phone);
@@ -95,10 +89,9 @@ public class RestaurantDetailActivity extends AppCompatActivity {
 
         uri = (String) getIntent().getExtras().get("uri");
 
-        textViewID= (TextView) findViewById(R.id.textViewId);
+
         textViewName= (TextView) findViewById(R.id.textViewName);
         textViewDescription= (TextView) findViewById(R.id.textViewDescription);
-        textViewOwner= (TextView) findViewById(R.id.textViewOwner);
         textViewLikes= (TextView) findViewById(R.id.textViewLikes);;
         textViewaddress= (TextView) findViewById(R.id.textViewAddress);
         textViewPhone= (TextView) findViewById(R.id.textViewPhone);
